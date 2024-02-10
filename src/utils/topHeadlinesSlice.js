@@ -5,6 +5,7 @@ const topHeadlinesSlice = createSlice({
     initialState:{
         topHeadlines:null,
         indiaHeadlines:null,
+        indiaSports:null,
     },
     reducers:{
         addTopHeadlines:(state, action)=>{
@@ -12,8 +13,11 @@ const topHeadlinesSlice = createSlice({
         },
         addIndiaHeadlines:(state, action)=>{
             state.indiaHeadlines = action.payload
-        }
+        },
+        addIndiaSports:(state, action)=>{
+            state.indiaSports=action.payload
+        },
     }
 })
-export const {addTopHeadlines, addIndiaHeadlines} = topHeadlinesSlice.actions;
+export const {addTopHeadlines, addIndiaHeadlines,addIndiaSports} = topHeadlinesSlice.actions;
 export default topHeadlinesSlice.reducer;

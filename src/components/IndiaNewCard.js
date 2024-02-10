@@ -1,21 +1,24 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const IndiaNewCard = (props) => {
-    const {title,description,image} = props;
+    const {title,description,image, url} = props;
+    
   return (
-    <div className='p-10 m-5 w-[30rem] h-[24rem]'>
-        
+    
+    <div className=' w-[100rem] md:w-40 p-2 m-4'>
+        <Link to={url} >
         <img 
-            className='h-20 w-[30rem]'
             src={image}
             alt="Heading Image"
         />
+        
         <div>
-            <h1 className='font-bold text-l p-1'>{title}</h1>
+            <h1 className='font-bold text-l p-1'>{title}</h1> 
             <p className='text-gray-500'>{description}</p>
         </div>
-
+        </Link>
     </div>
+    
   )
 }
 
